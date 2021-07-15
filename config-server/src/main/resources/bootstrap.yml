@@ -1,0 +1,14 @@
+server:
+  port: ${SERVER_PORT:8888}
+
+spring:
+  cloud:
+    config:
+      server:
+        git:
+          uri:
+        native:
+          search-locations: classpath:/microservice/dev
+
+  profiles:
+    active: dev
